@@ -1,3 +1,5 @@
+
+<div class="weather-data-wrapper">
 <div class="weather-data-container">
   <div *ngIf="currentWeather" class="current-weather">
     <div class="curredt-data" style="margin: 1rem">
@@ -116,9 +118,15 @@
       </div>
     </div>
   </div>
-
   <div *ngIf="accessories && accessories.length > 0">
     <p class="">Accessories</p>
     <!--Ovdje ubacite for petlju i ispisite ikonice te implementirajte tooltipove za preporucenu opremu-->
   </div>
+</div>
+
+<table *ngIf="weatherAlerts.alerts.alert" class="alerts-table">
+  <tr *ngFor="let alert of weatherAlerts.alerts.alert" class="alerts-item">
+    {{alert.headline}}
+  </tr>
+</table>
 </div>
