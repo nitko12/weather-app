@@ -1,3 +1,21 @@
 .card-group .card:hover {
     background-color: rgba(200, 200, 200, 0.2);
 }
+.card{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+}
+#city-name{
+    background: rgba(0,0,0,1.5);
+    border-radius: 12px;
+    margin: 0 5px;
+    color:white;
+}
+.form-group{
+    display: flex;
+}
+.form-group label{
+    margin: 0;
+}

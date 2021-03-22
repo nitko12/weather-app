@@ -76,7 +76,7 @@ export class DailyForecastComponent implements OnInit {
       legend: {
         display: false,
       },
-      responsive: false,
+      responsive: true,
       maintainAspectRatio: true,
       display: true,
       fill: false,
@@ -86,7 +86,7 @@ export class DailyForecastComponent implements OnInit {
             ticks: {
               fontSize: 12,
               fontFamily: 'Verdana',
-              fontColor: 'grey',
+              fontColor: 'white',
               fontStyle: 'normal',
             },
             gridLines: {
