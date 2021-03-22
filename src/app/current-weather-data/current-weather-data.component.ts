@@ -61,8 +61,8 @@ export class CurrentWeatherDataComponent implements OnInit {
     this.weatherService
       .getWeatherAndAirQuality(this.currentLocationString)
       .subscribe((response) => {
-        (this.airQualityAndWeather = response.body),
-          console.log(this.airQualityAndWeather);
+        this.airQualityAndWeather = response.body;
+        //console.log(this.airQualityAndWeather);
       });
   }
 
@@ -70,8 +70,8 @@ export class CurrentWeatherDataComponent implements OnInit {
     this.weatherService
       .getWeatherAlerts(this.currentLocationString)
       .subscribe((response) => {
-        (this.weatherAlerts = response.body),
-          console.log(this.airQualityAndWeather);
+        this.weatherAlerts = response.body;
+        //console.log(this.airQualityAndWeather);
       });
   }
 

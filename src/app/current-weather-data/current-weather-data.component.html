@@ -24,29 +24,30 @@
 
   <div class="sunrise">
     <div style="font-size: 1.5rem; margin: 1rem">Sunrise & sunset</div>
-    <div class="row" style="display:flex;">
+    <div class="row" style="display: flex">
       <div class="col-md-6 astrocol">
-        {{ astronomy.astronomy.astro.sunrise }}<br/>
-        <img src="assets/images/sunrise.png" class="astroicon asm">
+        {{ astronomy.astronomy.astro.sunrise }}<br />
+        <img src="assets/images/sunrise.png" class="astroicon asm" />
       </div>
       <div class="col-md-6 astrocol">
-        {{ astronomy.astronomy.astro.sunset }}<br/>
-        <img src="assets/images/sunset.png" class="astroicon asm">
+        {{ astronomy.astronomy.astro.sunset }}<br />
+        <img src="assets/images/sunset.png" class="astroicon asm" />
       </div>
     </div>
-    <hr/>
-    <div class="row" style="display:flex;">
+    <hr />
+    <div class="row" style="display: flex">
       <div class="col-md-6 astrocol">
-        {{ astronomy.astronomy.astro.moonrise }}<br/>
-        <img src="assets/images/moonrise.png" class="astroicon">
+        {{ astronomy.astronomy.astro.moonrise }}<br />
+        <img src="assets/images/moonrise.png" class="astroicon" />
       </div>
       <div class="col-md-6 astrocol">
-        {{ astronomy.astronomy.astro.moonset }}<br/>
-        <img src="assets/images/moonset.png" class="astroicon">
+        {{ astronomy.astronomy.astro.moonset }}<br />
+        <img src="assets/images/moonset.png" class="astroicon" />
       </div>
       <div class="col-md-12">
-        <b>Moon phase:</b>{{ astronomy.astronomy.astro.moon_phase }}<br/>
-        <b>Moon illumination:</b>{{ astronomy.astronomy.astro.moon_illumination }}
+        <b>Moon phase:</b>{{ astronomy.astronomy.astro.moon_phase }}<br />
+        <b>Moon illumination:</b
+        >{{ astronomy.astronomy.astro.moon_illumination }}
       </div>
     </div>
     <!-- <div> Real feel: {{currentWeather.current.condition.text}}</div> -->
@@ -59,7 +60,47 @@
           Air Quality {{ airQualityAndWeather.location.name }}:
         </p>
         <ul class="air-text">
-          ...
+          co:
+          {{
+            airQualityAndWeather.current.air_quality.co
+              .toString()
+              .substring(0, 7)
+          }}
+          <br />
+          no2:
+          {{
+            airQualityAndWeather.current.air_quality.no2
+              .toString()
+              .substring(0, 7)
+          }}
+          <br />
+          o3:
+          {{
+            airQualityAndWeather.current.air_quality.o3
+              .toString()
+              .substring(0, 7)
+          }}
+          <br />
+          so2:
+          {{
+            airQualityAndWeather.current.air_quality.so2
+              .toString()
+              .substring(0, 7)
+          }}
+          <br />
+          pm2_5:
+          {{
+            airQualityAndWeather.current.air_quality.pm2_5
+              .toString()
+              .substring(0, 7)
+          }}
+          <br />
+          pm10:
+          {{
+            airQualityAndWeather.current.air_quality.pm10
+              .toString()
+              .substring(0, 7)
+          }}
         </ul>
         <button
           type="button"
@@ -68,6 +109,7 @@
         >
           <a class="btn-text" routerLink="/air">
             Show Details
+
             <img class="icon-s" src="/assets/images/airqv.svg" alt=""
           /></a>
         </button>
