@@ -10,6 +10,22 @@
   width: 1280px;
 }
 
+@media only screen and (max-width: 600px) {
+  .weather-data-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .weather-data-wrapper{
+    position: relative;
+    transform: translateY(0%);
+    width: 100%;
+  }
+  .sunrise, .current-weather, .air-quality{
+    width: 90% !important;
+  }
+}
+
 .grid-container {
   display: grid;
   text-align: top;

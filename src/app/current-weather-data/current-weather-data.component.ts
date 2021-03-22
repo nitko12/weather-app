@@ -27,7 +27,7 @@ export class CurrentWeatherDataComponent implements OnInit {
       (latitude, longitude) => {
         this.currentLocation = { latitude, longitude };
         this.currentLocationString = `${latitude},${longitude}`;
-
+        //this.currentLocationString ='mississippi'
         this.locationState = 'loaded';
 
         this.getCurrentWeatherData();

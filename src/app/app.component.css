@@ -48,7 +48,7 @@
 }
 
 .mynav{
-  position: absolute;
+  position: fixed;
   z-index:50;
   left:-215px;
   top: 50%;
