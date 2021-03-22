@@ -35,7 +35,7 @@ export class DailyForecastComponent implements OnInit {
     this.weatherService
       .getDailyWeatherByCityName(this.name)
       .subscribe((res: any) => {
-        console.log(res);
+        //console.log(res);
         //this.renderLineChart(res.forecast.forecastday);
 
         this.location.date = new Date(
@@ -50,9 +50,9 @@ export class DailyForecastComponent implements OnInit {
 
         this.icon = res.current.condition.icon;
 
-        console.log(res.forecast.forecastday[0]);
-        //this.minTemp = res.forecast.forecastday[0].mintemp_c;
-        // this.maxTemp = ;
+        //console.log(res.forecast.forecastday[0].day.mintemp_c);
+        this.minTemp = res.forecast.forecastday[0].day.mintemp_c;
+        this.maxTemp = res.forecast.forecastday[0].day.maxtemp_c;
 
         // console.log(res.forecast.forecastday[0]);
 
