@@ -1,10 +1,10 @@
 export class City {
-    name: string;
-    date: string;
-    localTime: string;
+  name: string;
+  date: string;
+  localTime: string;
 
-    // constructor(name: string, localTime: string) {
-    //     this.name = name;
-    //     this.localTime = localTime;
-    // }
+  // constructor(name: string, localTime: string) {
+  //     this.name = name;
+  //     this.localTime = localTime;
+  // }
 }

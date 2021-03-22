@@ -6,7 +6,7 @@ export interface Location {
   lon: number;
 }
 
-export class Location  {
+export class Location {
   constructor(
     public name: string,
     public region: string,
