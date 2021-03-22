@@ -29,7 +29,8 @@
   justify-content: space-around;
   margin:0.5rem;
   font-size:1rem;
-  background-color: lightgrey;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   border-radius:0.5rem;
   width:40%
 }
@@ -53,15 +54,18 @@
   justify-content: space-around;
   margin:0.5rem;
   font-size:1rem;
-  background-image:linear-gradient(#bb8cb8, #dec5dc);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   border-radius:0.5rem;
   width:70%
 }
 
+
 .sunrise{
   width:30%;
   border-radius:0.5rem;
-  background-color:lightgrey;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   margin:0.5rem;
 }
 

@@ -26,6 +26,52 @@
 .navbar{
   background: -webkit-linear-gradient(#c4bcc5, #ddcae0,#e6dde7);
   margin-bottom: 3rem;
+  border-radius: 25px;
 }
 
+.navbar-nav{
+  margin: 0 auto;
+}
 
+.back-col{
+  margin: 0;
+  padding: 1rem;
+  min-height: 100%;
+}
+.weather-header{
+  border-radius: 15px;
+}
+
+.back-col {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.mynav{
+  position: absolute;
+  z-index:50;
+  left:-215px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mynav-item{
+  background-color: white;
+  border-radius: 25px;
+  color: black !important;
+  padding: 10px;
+  padding-left:40px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  text-align: right;
+  position: relative;
+  left:0;
+  transition: 0.3s all;
+  display: block;
+}
+.mynav-item i{
+  padding-left: 20px;
+}
+.mynav-item:hover{
+  left:180px;
+  transition: 0.3s all;
+}

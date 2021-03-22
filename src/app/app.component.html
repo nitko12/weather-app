@@ -1,18 +1,16 @@
+
+
+<div class="mynav">
+  <a class="mynav-item" routerLink="/">Current weather <i class="fas fa-sun"></i></a>
+  <a class="mynav-item" routerLink="/daily-forecast">Daily forecast <i class="fas fa-thermometer-three-quarters"></i></a>
+  <a class="mynav-item" routerLink="/alerts">Severe weather alerts <i class="fas fa-exclamation-circle"></i></a>
+  <a class="mynav-item" routerLink="/report">Report severe weather <i class="fas fa-flag"></i></a>
+</div>
 <div class="back-col">
     <div class="weather-header">
-      <p class="app-title">THE WEATHER APP</p>
+      <p class="app-title">BetterWeather</p>
     </div>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" routerLink="/">Current weather</a>
-            <a class="nav-item nav-link" routerLink="/daily-forecast">Daily forecast</a>
-            <a class="nav-item nav-link" routerLink="/alerts">Severe weather alerts</a>
-            <a class="nav-item nav-link" routerLink="/report">Report severe weather</a>
-          </div>
-        </div>
-      </nav>
       
     <router-outlet></router-outlet>
 </div>
