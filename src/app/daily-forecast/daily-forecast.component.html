@@ -40,17 +40,16 @@
       class="card"
       style="width: fit-content; padding: 0%; margin: 1%; border-radius: 10%"
     >
-      <!-- TODO Kreirati kartice prema zadanom templateu sa podacima prognoze za tri dana. Klikom na karticu poziva se renderLineChart() metoda sa podacima za taj dan  -->
-      <div class="card-body">
-        aaaa
-        <!-- TODO Ispisati datum u dd.MM. formatu -->
-        <h5 class="card-title" style="text-align: center"></h5>
-        <!-- TODO Ubaciti ikonu prognoze vremena -->
-        <img src="" />
+      <div class="card-body" style="text-align: center">
+        <h5 class="card-title" style="text-align: center">
+          {{ location.date }}
+        </h5>
+
+        <img src="{{ icon }}" />
         <br />
         <!-- U iduća dva span elementa ispisati minimalnu i maksimalnu temperaturu za određeni dan -->
-        <span class="min-temp" style="float: left">°</span>
-        <span class="max-temp" style="float: right">°</span>
+        <span class="min-temp" style="float: left">{{ minTemp }}°</span>
+        <span class="max-temp" style="float: right">{{ maxTemp }}°</span>
       </div>
     </div>
   </div>
