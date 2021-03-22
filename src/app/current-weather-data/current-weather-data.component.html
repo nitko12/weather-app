@@ -1,54 +1,57 @@
 <div class="weather-data-container">
   <div *ngIf="currentWeather" class="current-weather">
     <div class="curredt-data" style="margin: 1rem">
-      <div style="font-size: 1.5rem"> Current weather on location {{currentWeather.location.name}} </div>
-      <div>On date: {{currentWeather.current.last_updated}} </div>
-      <div style="font-size: 3rem; font-weight: bold;">{{currentWeather.current.temp_c}} °C</div>
-      <div>Wind: {{currentWeather.current.wind_kph}} km/h {{currentWeather.current.wind_dir}}</div>
-      <div>{{currentWeather.current.condition.text}}</div>
+      <div style="font-size: 1.5rem">
+        Current weather on location {{ currentWeather.location.name }}
+      </div>
+      <div>On date: {{ currentWeather.current.last_updated }}</div>
+      <div style="font-size: 3rem; font-weight: bold">
+        {{ currentWeather.current.temp_c }} °C
+      </div>
+      <div>
+        Wind: {{ currentWeather.current.wind_kph }} km/h
+        {{ currentWeather.current.wind_dir }}
+      </div>
+      <div>{{ currentWeather.current.condition.text }}</div>
+      <div>{{ currentWeather.current.pressure_mb }} pressure in millibars</div>
+      <div>{{ currentWeather.current.uv }} uv index</div>
     </div>
 
     <div class="current-icon" style="margin: 1rem">
-      <img src={{currentWeather.current.condition.icon}}>
+      <img src="{{ currentWeather.current.condition.icon }}" />
     </div>
-
   </div>
 
   <div class="sunrise">
-    <div style="font-size: 1.5rem; margin: 1rem">Sunrise & sunset </div>
+    <div style="font-size: 1.5rem; margin: 1rem">Sunrise & sunset</div>
     <!-- <div> Real feel: {{currentWeather.current.condition.text}}</div> -->
   </div>
 
-
-
-    <div *ngIf="airQualityAndWeather" class="air-quality">
-      <div class="grid-container">
-        <div style="margin: 1rem">
-          <p class="air-title"> Air Quality {{airQualityAndWeather.location.name}}: </p>
-          <ul class="air-text">
-            ...
-          </ul>
-          <button type="button" class="btn btn-outline-info" (click)="openServicesList()">
-            <a class="btn-text" routerLink="/air">  Show Details  <img class="icon-s" src="/assets/images/airqv.svg" alt="" /></a>
-          </button>
-        </div>
-    </div>
-
-    </div>
-
-    <div *ngIf="accessories && accessories.length > 0">
-        <p class="">Accessories</p>
-        <!--Ovdje ubacite for petlju i ispisite ikonice te implementirajte tooltipove za preporucenu opremu-->
+  <div *ngIf="airQualityAndWeather" class="air-quality">
+    <div class="grid-container">
+      <div style="margin: 1rem">
+        <p class="air-title">
+          Air Quality {{ airQualityAndWeather.location.name }}:
+        </p>
+        <ul class="air-text">
+          ...
+        </ul>
+        <button
+          type="button"
+          class="btn btn-outline-info"
+          (click)="openServicesList()"
+        >
+          <a class="btn-text" routerLink="/air">
+            Show Details
+            <img class="icon-s" src="/assets/images/airqv.svg" alt=""
+          /></a>
+        </button>
+      </div>
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
+  <div *ngIf="accessories && accessories.length > 0">
+    <p class="">Accessories</p>
+    <!--Ovdje ubacite for petlju i ispisite ikonice te implementirajte tooltipove za preporucenu opremu-->
+  </div>
+</div>
