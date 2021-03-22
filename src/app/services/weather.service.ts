@@ -10,40 +10,37 @@ import { environment } from 'src/environments/environment';
 export class WeatherService {
   constructor(protected http: HttpClient) {}
 
-  public getCurrentWeatherData() {
+  public getCurrentWeatherData(location: string) {
     return this.http.get<CurrentWeatherData>(
-      'http://api.weatherapi.com/v1/current.json?key=' +
-        environment.apiKey +
-        '&q=Split',
+      `http://api.weatherapi.com/v1/current.json?key=${environment.apiKey}&q=${location}`,
       { observe: 'response', responseType: 'json' }
     );
   }
 
-  public getWeatherAndAirQuality() {
+  public getWeatherAndAirQuality(location: string) {
     return this.http.get<CurrentWeatherData>(
-      'http://api.weatherapi.com/v1/current.json?key=' +
-        environment.apiKey +
-        '&q=Split&aqi=yes',
+      `http://api.weatherapi.com/v1/current.json?key=${environment.apiKey}&q=${location}&aqi=yes`,
       { observe: 'response', responseType: 'json' }
     );
   }
 
-  public getAstronomy() {
+  public getAstronomy(location: string) {
     return this.http.get<AstronomyData>(
-      'http://api.weatherapi.com/v1/astronomy.json?key=' +
-        environment.apiKey +
-        '&q=Split&dt=',
+      `http://api.weatherapi.com/v1/astronomy.json?key=${environment.apiKey}&q=${location}&dt=`,
       { observe: 'response', responseType: 'json' }
     );
   }
 
-  public getDailyWeatherByCityName(city: string) {
-    const url: string =
-      'http://api.weatherapi.com/v1/forecast.json?key=' +
-      environment.apiKey +
-      '&q=' +
-      city +
-      '&days=3&aqi=no';
+  public getDailyWeatherByCityName(location: string) {
+    const url: string = `http://api.weatherapi.com/v1/forecast.json?key=${environment.apiKey}&q=${location}&days=3&aqi=no`;
+
     return this.http.get(url);
+  }
+
+  public getWeatherAlerts(location: string) {
+    return this.http.get(
+      `http://api.weatherapi.com/v1/forecast.json?key=${environment.apiKey}&q=${location}&days=3&aqi=no&alerts=yes`,
+      { observe: 'response', responseType: 'json' }
+    );
   }
 }
