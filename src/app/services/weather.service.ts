@@ -1,4 +1,5 @@
 import { CurrentWeatherData } from '../models/current-weather-data.model';
+import { AstronomyData } from '../models/astronomy-data.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -23,6 +24,13 @@ export class WeatherService {
     + environment.apiKey +
     '&q=Split&aqi=yes',
     { observe: 'response', responseType: 'json' });
+  }
+
+  public getAstronomy() {
+    return this.http.get<AstronomyData>('http://api.weatherapi.com/v1/astronomy.json?key='
+    + environment.apiKey +
+    '&q=Split&dt=',
+    {observe: 'response', responseType: 'json'})
   }
 
   public getDailyWeatherByCityName(city: string) {
