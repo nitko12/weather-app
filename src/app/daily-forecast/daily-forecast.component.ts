@@ -16,6 +16,11 @@ export class DailyForecastComponent implements OnInit {
   location: City;
   weatherData: DailyData[] = [];
 
+  icon: string;
+
+  minTemp: number;
+  maxTemp: number;
+
   canvas: any;
   ctx: any;
   dailyTempChart: any;
@@ -41,8 +46,13 @@ export class DailyForecastComponent implements OnInit {
         ).toLocaleTimeString();
         this.location.name = res.location.name;
 
-        // this.weatherData = res.forecast.forecastday as DailyData[];
         this.renderLineChart(res.forecast.forecastday[0] as DailyData);
+
+        this.icon = res.current.condition.icon;
+
+        console.log(res.forecast.forecastday[0]);
+        //this.minTemp = res.forecast.forecastday[0].mintemp_c;
+        // this.maxTemp = ;
 
         // console.log(res.forecast.forecastday[0]);
 
@@ -53,7 +63,6 @@ export class DailyForecastComponent implements OnInit {
 
   renderLineChart(data: DailyData) {
     // Pomoćne varijable za spremanje podataka o satu i temperaturi
-    console.log((data as any).hour);
     let hourData: string[] = (data as any).hour.map((x) =>
       new Date(x.time).toLocaleTimeString()
     );
