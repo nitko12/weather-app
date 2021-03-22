@@ -140,7 +140,7 @@ export class DailyForecastComponent implements OnInit {
                   radius = point._model.radius,
                   fontSize = 14,
                   fontFamily = 'Verdana',
-                  fontColor = 'grey',
+                  fontColor = 'white',
                   fontStyle = 'normal';
                 ctx.save();
                 ctx.textBaseline = 'middle';
