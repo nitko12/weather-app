@@ -14,14 +14,14 @@ export class WeatherService {
   public getCurrentWeatherData() {
     return this.http.get<CurrentWeatherData>('http://api.weatherapi.com/v1/current.json?key='
     + environment.apiKey +
-    '&q=Zagreb',
+    '&q=Split',
     { observe: 'response', responseType: 'json' });
   }
 
   public getWeatherAndAirQuality() {
     return this.http.get<CurrentWeatherData>('http://api.weatherapi.com/v1/current.json?key='
     + environment.apiKey +
-    '&q=Zagreb&aqi=yes',
+    '&q=Split&aqi=yes',
     { observe: 'response', responseType: 'json' });
   }
 

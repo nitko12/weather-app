@@ -14,7 +14,7 @@ export class DoughnutChartComponent implements OnInit {
           plotShadow: false
        },
        title : {
-          text: 'Current Air Quality Zagreb'
+          text: 'Current Air Quality Split'
        },
        tooltip : {
           pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

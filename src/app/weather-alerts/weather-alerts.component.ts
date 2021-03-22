@@ -71,7 +71,7 @@ export class WeatherAlertsComponent implements OnInit {
       }
     })
 
-    this.weatherAlertService.getLastWeatherAlertForCity("Zagreb").subscribe((response) => {
+    this.weatherAlertService.getLastWeatherAlertForCity("Split").subscribe((response) => {
       this.weatherAlert = response.body,
       this.weatherAlertType = this.weatherAlertTypes.find(x => x.weatherAlertTypeId === this.weatherAlert.weatherAlertTypeId);
     });
