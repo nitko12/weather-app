@@ -2,9 +2,12 @@
 .weather-data-container{
   display: flex;
   justify-content: center;
+}
+.weather-data-wrapper{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  max-width: 1280px;
 }
 
 .grid-container {
@@ -88,4 +91,18 @@
 }
 .astrocol{
   text-align: center;
+}
+.alerts-item{
+  display: flex;
+  justify-content: space-around;
+  margin: 1%;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 0.5rem;
+  width: 98%;
+}
+.alerts-table{
+  width: 100%;
 }

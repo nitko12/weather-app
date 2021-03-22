@@ -33,6 +33,7 @@ export class CurrentWeatherDataComponent implements OnInit {
         this.getCurrentWeatherData();
         this.getWeatherAndAirQuality();
         this.getAstronomyData();
+        this.getWeatherAlerts();
       },
       () => {
         this.locationState = 'error';
