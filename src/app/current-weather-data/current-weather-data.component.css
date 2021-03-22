@@ -72,3 +72,13 @@
 .current-icon{
   width:10%;
 }
+
+.astroicon.asm{
+  max-height: 25px;
+}
+.astroicon {
+  max-height: 40px;
+}
+.astrocol{
+  text-align: center;
+}

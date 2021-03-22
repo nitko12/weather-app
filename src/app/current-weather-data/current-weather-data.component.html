@@ -24,6 +24,31 @@
 
   <div class="sunrise">
     <div style="font-size: 1.5rem; margin: 1rem">Sunrise & sunset</div>
+    <div class="row" style="display:flex;">
+      <div class="col-md-6 astrocol">
+        {{ astronomy.astronomy.astro.sunrise }}<br/>
+        <img src="assets/images/sunrise.png" class="astroicon asm">
+      </div>
+      <div class="col-md-6 astrocol">
+        {{ astronomy.astronomy.astro.sunset }}<br/>
+        <img src="assets/images/sunset.png" class="astroicon asm">
+      </div>
+    </div>
+    <hr/>
+    <div class="row" style="display:flex;">
+      <div class="col-md-6 astrocol">
+        {{ astronomy.astronomy.astro.moonrise }}<br/>
+        <img src="assets/images/moonrise.png" class="astroicon">
+      </div>
+      <div class="col-md-6 astrocol">
+        {{ astronomy.astronomy.astro.moonset }}<br/>
+        <img src="assets/images/moonset.png" class="astroicon">
+      </div>
+      <div class="col-md-12">
+        <b>Moon phase:</b>{{ astronomy.astronomy.astro.moon_phase }}<br/>
+        <b>Moon illumination:</b>{{ astronomy.astronomy.astro.moon_illumination }}
+      </div>
+    </div>
     <!-- <div> Real feel: {{currentWeather.current.condition.text}}</div> -->
   </div>
 
